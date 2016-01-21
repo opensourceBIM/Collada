@@ -29,28 +29,10 @@ import org.bimserver.shared.exceptions.PluginException;
 
 public class ColladaSerializerPlugin extends AbstractSerializerPlugin {
 
-	private boolean initialized = false;
-
-	@Override
-	public String getDescription() {
-		return "ColladaSerializer";
-	}
-
-	@Override
-	public String getVersion() {
-		return "1.0";
-	}
-
 	@Override
 	public void init(PluginManagerInterface pluginManager) throws PluginException {
-		initialized = true;
 	}
 	
-	@Override
-	public boolean needsGeometry() {
-		return true;
-	}
-
 	@Override
 	public EmfSerializer createSerializer(PluginConfiguration pluginConfiguration) {
 		return new ColladaSerializer();
@@ -69,11 +51,6 @@ public class ColladaSerializerPlugin extends AbstractSerializerPlugin {
 	@Override
 	public String getDefaultExtension() {
 		return "dae";
-	}
-
-	@Override
-	public boolean isInitialized() {
-		return initialized;
 	}
 
 	@Override

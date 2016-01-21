@@ -29,17 +29,10 @@ import org.bimserver.shared.exceptions.PluginException;
 
 public class ZippedOpenGLTransmissionFormatTextOpen3DGCSerializerPlugin extends AbstractSerializerPlugin {
 
-	private boolean initialized = false;
-	
 	@Override
 	public Serializer createSerializer(PluginConfiguration plugin) {
 		Collada2GLTFConfiguration configuration = new Collada2GLTFConfiguration("Open3DGC", "ascii", false, false, true, false, false);
 		return new OpenGLTransmissionFormatSerializer(configuration, ".zip");
-	}
-
-	@Override
-	public boolean needsGeometry() {
-		return true;
 	}
 
 	@Override
@@ -50,27 +43,11 @@ public class ZippedOpenGLTransmissionFormatTextOpen3DGCSerializerPlugin extends 
 	@Override
 	public void init(PluginManagerInterface pluginManager) throws PluginException {
 		// TODO: Consolidate separate OpenGL Transformation Format convenience plugins when plugin parameters are supported in the PluginImplementation of plugin.xml. 
-		initialized = true;
-	}
-
-	@Override
-	public String getDescription() {
-		return "Zipped OpenGL Transmission Format (glTF) with text-based Open3DGC compression.";
 	}
 
 	@Override
 	public String getDefaultName() {
 		return "glTF with Open3DGC compression as ZIP";
-	}
-
-	@Override
-	public String getVersion() {
-		return "1.0";
-	}
-
-	@Override
-	public boolean isInitialized() {
-		return initialized;
 	}
 
 	@Override
@@ -82,5 +59,4 @@ public class ZippedOpenGLTransmissionFormatTextOpen3DGCSerializerPlugin extends 
 	public String getDefaultContentType() {
 		return "application/zip";
 	}
-
 }

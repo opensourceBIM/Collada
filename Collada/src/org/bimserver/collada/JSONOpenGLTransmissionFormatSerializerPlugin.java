@@ -29,17 +29,10 @@ import org.bimserver.shared.exceptions.PluginException;
 
 public class JSONOpenGLTransmissionFormatSerializerPlugin extends AbstractSerializerPlugin {
 
-	private boolean initialized = false;
-	
 	@Override
 	public Serializer createSerializer(PluginConfiguration plugin) {
 		Collada2GLTFConfiguration configuration = new Collada2GLTFConfiguration(null, null, false, false, true, false, false);
 		return new OpenGLTransmissionFormatSerializer(configuration, ".json");
-	}
-
-	@Override
-	public boolean needsGeometry() {
-		return true;
 	}
 
 	@Override
@@ -50,27 +43,11 @@ public class JSONOpenGLTransmissionFormatSerializerPlugin extends AbstractSerial
 	@Override
 	public void init(PluginManagerInterface pluginManager) throws PluginException {
 		// TODO: Consolidate separate OpenGL Transformation Format convenience plugins when plugin parameters are supported in the PluginImplementation of plugin.xml. 
-		initialized = true;
-	}
-
-	@Override
-	public String getDescription() {
-		return "JSON data streams (base64) wrapper for OpenGL Transmission Format (glTF).";
 	}
 
 	@Override
 	public String getDefaultName() {
 		return "glTF as JSON data streams";
-	}
-
-	@Override
-	public String getVersion() {
-		return "1.0";
-	}
-
-	@Override
-	public boolean isInitialized() {
-		return initialized;
 	}
 
 	@Override
@@ -82,5 +59,4 @@ public class JSONOpenGLTransmissionFormatSerializerPlugin extends AbstractSerial
 	public String getDefaultContentType() {
 		return "application/json";
 	}
-
 }

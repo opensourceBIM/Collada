@@ -3,41 +3,49 @@
 	<PluginImplementation>
 		<interfaceClass>org.bimserver.plugins.serializers.SerializerPlugin</interfaceClass>
 		<implementationClass>org.bimserver.collada.ColladaSerializerPlugin</implementationClass>
+		<description>Collada</description>
 		<enabled>true</enabled>
 	</PluginImplementation>
 	<PluginImplementation>
 		<interfaceClass>org.bimserver.plugins.serializers.SerializerPlugin</interfaceClass>
 		<implementationClass>org.bimserver.collada.KmzSerializerPlugin</implementationClass>
+		<description>KmzSerializer</description>
 		<enabled>true</enabled>
 	</PluginImplementation>
 	<PluginImplementation>
 		<interfaceClass>org.bimserver.plugins.serializers.SerializerPlugin</interfaceClass>
 		<implementationClass>org.bimserver.collada.ZippedOpenGLTransmissionFormatSerializerPlugin</implementationClass>
+		<description>Zipped OpenGL Transmission Format (glTF)</description>
 		<enabled>true</enabled>
 	</PluginImplementation>
 	<PluginImplementation>
 		<interfaceClass>org.bimserver.plugins.serializers.SerializerPlugin</interfaceClass>
 		<implementationClass>org.bimserver.collada.ZippedOpenGLTransmissionFormatTextOpen3DGCSerializerPlugin</implementationClass>
+		<description>Zipped OpenGL Transmission Format (glTF) with text-based Open3DGC compression.</description>
 		<enabled>true</enabled>
 	</PluginImplementation>
 	<PluginImplementation>
 		<interfaceClass>org.bimserver.plugins.serializers.SerializerPlugin</interfaceClass>
 		<implementationClass>org.bimserver.collada.ZippedOpenGLTransmissionFormatBinaryOpen3DGCSerializerPlugin</implementationClass>
+		<description>Zipped OpenGL Transmission Format (glTF) with binary Open3DGC compression.</description>
 		<enabled>true</enabled>
 	</PluginImplementation>
 	<PluginImplementation>
 		<interfaceClass>org.bimserver.plugins.serializers.SerializerPlugin</interfaceClass>
 		<implementationClass>org.bimserver.collada.JSONOpenGLTransmissionFormatSerializerPlugin</implementationClass>
+		<description>JSON data streams (base64) wrapper for OpenGL Transmission Format (glTF).</description>
 		<enabled>true</enabled>
 	</PluginImplementation>
 	<PluginImplementation>
 		<interfaceClass>org.bimserver.plugins.serializers.SerializerPlugin</interfaceClass>
 		<implementationClass>org.bimserver.collada.JSONOpenGLTransmissionFormatTextOpen3DGCSerializerPlugin</implementationClass>
+		<description>JSON data streams (base64) wrapper for OpenGL Transmission Format (glTF) with text-based Open3DGC compression.</description>
 		<enabled>true</enabled>
 	</PluginImplementation>
 	<PluginImplementation>
 		<interfaceClass>org.bimserver.plugins.serializers.SerializerPlugin</interfaceClass>
 		<implementationClass>org.bimserver.collada.JSONOpenGLTransmissionFormatBinaryOpen3DGCSerializerPlugin</implementationClass>
+		<description>JSON data streams (base64) wrapper for OpenGL Transmission Format (glTF) with binary Open3DGC compression.</description>
 		<enabled>true</enabled>
 	</PluginImplementation>
 </PluginDescriptor>
