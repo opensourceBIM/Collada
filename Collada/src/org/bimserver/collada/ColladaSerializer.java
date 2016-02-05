@@ -38,7 +38,6 @@ import java.util.Set;
 import org.apache.commons.lang.StringUtils;
 import org.bimserver.emf.IdEObject;
 import org.bimserver.emf.IfcModelInterface;
-import org.bimserver.emf.PackageMetaData;
 import org.bimserver.geometry.Matrix;
 import org.bimserver.models.geometry.GeometryData;
 import org.bimserver.models.geometry.GeometryInfo;
@@ -129,14 +128,9 @@ public class ColladaSerializer extends AbstractGeometrySerializer {
 	private Vector3d highestObserved = new Vector3d();
 
 	@Override
-	public void init(IfcModelInterface model, ProjectInfo projectInfo, PluginManagerInterface pluginManager, PackageMetaData packageMetaData, boolean normalizeOids) throws SerializerException {
+	public void init(IfcModelInterface model, ProjectInfo projectInfo, PluginManagerInterface pluginManager, boolean normalizeOids) throws SerializerException {
 		this.lengthUnitPrefix = getLengthUnitPrefix(model);
-		super.init(model, projectInfo, pluginManager, packageMetaData, normalizeOids);
-	}
-
-	@Override
-	public void reset() {
-		setMode(Mode.BODY);
+		super.init(model, projectInfo, pluginManager, normalizeOids);
 	}
 
 	@Override

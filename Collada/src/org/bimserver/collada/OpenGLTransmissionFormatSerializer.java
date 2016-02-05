@@ -36,7 +36,6 @@ import org.apache.commons.codec.binary.Base64OutputStream;
 import org.apache.commons.io.IOUtils;
 import org.bimserver.collada.Collada2GLTFThread.Collada2GLTFConfiguration;
 import org.bimserver.emf.IfcModelInterface;
-import org.bimserver.emf.PackageMetaData;
 import org.bimserver.plugins.PluginManagerInterface;
 import org.bimserver.plugins.serializers.EmfSerializer;
 import org.bimserver.plugins.serializers.ProgressReporter;
@@ -96,26 +95,18 @@ public class OpenGLTransmissionFormatSerializer extends EmfSerializer {
 
 	//
 	@Override
-	public void init(IfcModelInterface model, ProjectInfo projectInfo, PluginManagerInterface pluginManager, PackageMetaData packageMetaData, boolean normalizeOids) throws SerializerException {
-		super.init(model, projectInfo, pluginManager, packageMetaData, normalizeOids);
+	public void init(IfcModelInterface model, ProjectInfo projectInfo, PluginManagerInterface pluginManager, boolean normalizeOids) throws SerializerException {
+		super.init(model, projectInfo, pluginManager, normalizeOids);
 		this.pluginManager = pluginManager;
 		this.projectInfo = projectInfo;
 		try {
 			colladaSerializer = new ColladaSerializer();
-			colladaSerializer.init(model, projectInfo, pluginManager, packageMetaData, normalizeOids);
+			colladaSerializer.init(model, projectInfo, pluginManager, normalizeOids);
 		} catch (SerializerException e) {
 			throw new SerializerException(e);
 		}
 		// Set the file name to be exported (after it's been serialized in the Collada serializer).
 		this.configuration.fileName = projectInfo.getName() + ".dae";
-	}
-
-	@Override
-	public void reset() {
-		if (colladaSerializer != null)
-			colladaSerializer.reset();
-		//
-		setMode(Mode.BODY);
 	}
 
 	@Override
