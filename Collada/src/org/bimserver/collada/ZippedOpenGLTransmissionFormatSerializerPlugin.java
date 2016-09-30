@@ -54,4 +54,9 @@ public class ZippedOpenGLTransmissionFormatSerializerPlugin extends AbstractSeri
 	public String getDefaultContentType() {
 		return "application/zip";
 	}
+
+	@Override
+	public String getOutputFormat(Schema schema) {
+		return null;
+	}
 }

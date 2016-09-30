@@ -54,4 +54,9 @@ public class ZippedOpenGLTransmissionFormatBinaryOpen3DGCSerializerPlugin extend
 	public String getDefaultContentType() {
 		return "application/zip";
 	}
+
+	@Override
+	public String getOutputFormat(Schema schema) {
+		return null;
+	}
 }

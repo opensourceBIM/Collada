@@ -54,4 +54,9 @@ public class JSONOpenGLTransmissionFormatTextOpen3DGCSerializerPlugin extends Ab
 	public String getDefaultContentType() {
 		return "application/json";
 	}
+
+	@Override
+	public String getOutputFormat(Schema schema) {
+		return null;
+	}
 }

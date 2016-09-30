@@ -57,4 +57,9 @@ public class KmzSerializerPlugin extends AbstractSerializerPlugin {
 	public Set<Schema> getSupportedSchemas() {
 		return Schema.IFC2X3TC1.toSet();
 	}
+
+	@Override
+	public String getOutputFormat(Schema schema) {
+		return "KMZ_2.2.0";
+	}
 }

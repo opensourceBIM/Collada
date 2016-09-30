@@ -54,4 +54,9 @@ public class JSONOpenGLTransmissionFormatSerializerPlugin extends AbstractSerial
 	public String getDefaultContentType() {
 		return "application/json";
 	}
+
+	@Override
+	public String getOutputFormat(Schema schema) {
+		return null;
+	}
 }
