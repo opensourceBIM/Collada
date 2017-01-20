@@ -23,6 +23,7 @@ import org.bimserver.emf.Schema;
 import org.bimserver.models.store.ObjectDefinition;
 import org.bimserver.plugins.PluginConfiguration;
 import org.bimserver.plugins.PluginContext;
+import org.bimserver.plugins.SchemaName;
 import org.bimserver.plugins.serializers.AbstractSerializerPlugin;
 import org.bimserver.plugins.serializers.EmfSerializer;
 import org.bimserver.shared.exceptions.PluginException;
@@ -60,6 +61,6 @@ public class ColladaSerializerPlugin extends AbstractSerializerPlugin {
 
 	@Override
 	public String getOutputFormat(Schema schema) {
-		return "COLLADA_1.5";
+		return SchemaName.COLLADA_1_5.name();
 	}
 }

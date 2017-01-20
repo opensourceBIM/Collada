@@ -23,6 +23,7 @@ import org.bimserver.emf.Schema;
 import org.bimserver.models.store.ObjectDefinition;
 import org.bimserver.plugins.PluginConfiguration;
 import org.bimserver.plugins.PluginContext;
+import org.bimserver.plugins.SchemaName;
 import org.bimserver.plugins.serializers.AbstractSerializerPlugin;
 import org.bimserver.plugins.serializers.EmfSerializer;
 import org.bimserver.shared.exceptions.PluginException;
@@ -60,6 +61,6 @@ public class KmzSerializerPlugin extends AbstractSerializerPlugin {
 
 	@Override
 	public String getOutputFormat(Schema schema) {
-		return "KMZ_2.2.0";
+		return SchemaName.KMZ_2_2_0.name();
 	}
 }
