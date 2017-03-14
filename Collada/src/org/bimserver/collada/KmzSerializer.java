@@ -67,6 +67,9 @@ public class KmzSerializer extends EmfSerializer {
 			}
 			setMode(Mode.FINISHED);
 			return true;
+		} else if (getMode() == Mode.HEADER) {
+			setMode(Mode.BODY);
+			return true;
 		} else if (getMode() == Mode.FINISHED) {
 			return false;
 		}

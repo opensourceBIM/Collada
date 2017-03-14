@@ -144,6 +144,9 @@ public class OpenGLTransmissionFormatSerializer extends EmfSerializer {
 			return true;
 		} else if (getMode() == Mode.FINISHED) {
 			return false;
+		} else if (getMode() == Mode.HEADER) {
+			setMode(Mode.BODY);
+			return true;
 		}
 		return false;
 	}
