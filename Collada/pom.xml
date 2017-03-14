@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.opensourcebim</groupId>
 	<artifactId>collada</artifactId>
-	<version>0.0.9-SNAPSHOT</version>
+	<version>0.0.9</version>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<timestamp>${maven.build.timestamp}</timestamp>
@@ -174,7 +174,7 @@
 		<url>https://github.com/opensourceBIM/Collada.git</url>
 		<connection>scm:git:https://github.com/opensourceBIM/Collada.git</connection>
 		<developerConnection>scm:git:https://github.com/opensourceBIM/Collada.git</developerConnection>
-		<tag>HEAD</tag>
+		<tag>collada-0.0.9</tag>
 	</scm>
 	<organization>
 		<name>OpenSource BIM</name>
